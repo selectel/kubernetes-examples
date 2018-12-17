@@ -9,3 +9,4 @@ provisioner: kubernetes.io/cinder
 parameters:
   type: fast.ru-2b
   availability: ru-2b
+allowVolumeExpansion: true
