@@ -1,13 +1,14 @@
-# nginx-1.14.yaml
+---
+# nginx-1.17.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
-  replicas: 10
+  replicas: 4
   selector:
     matchLabels:
-      app: webservice
+      app: nginx
   minReadySeconds: 10
   strategy:
     type: RollingUpdate
@@ -17,10 +18,10 @@ spec:
   template:
     metadata:
       labels:
-        app: webservice
+        app: nginx
     spec:
       containers:
       - name: nginx
-        image: library/nginx:1.14-alpine
+        image: library/nginx:1.17
         ports:
         - containerPort: 80

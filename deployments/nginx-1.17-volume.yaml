@@ -1,0 +1,36 @@
+---
+# nginx-1.17.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      nodeSelector:
+        topology.cinder.csi.openstack.org/zone: ru-1a
+      containers:
+        - name: nginx
+          image: library/nginx:1.17
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: "/var/www/html"
+              name: data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: my-pv-claim
