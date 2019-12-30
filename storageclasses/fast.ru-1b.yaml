@@ -1,11 +1,10 @@
+---
 # fast.ru-1b.yaml
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
   name: fast.ru-1b
-  annotations:
-    storageclass.beta.kubernetes.io/is-default-class: "true"
-provisioner: kubernetes.io/cinder
+provisioner: cinder.csi.openstack.org
 parameters:
   type: fast.ru-1b
   availability: ru-1b

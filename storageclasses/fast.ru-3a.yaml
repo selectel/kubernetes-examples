@@ -1,11 +1,10 @@
+---
 # fast.ru-3a.yaml
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
   name: fast.ru-3a
-  annotations:
-    storageclass.beta.kubernetes.io/is-default-class: "true"
-provisioner: kubernetes.io/cinder
+provisioner: cinder.csi.openstack.org
 parameters:
   type: fast.ru-3a
   availability: ru-3a
