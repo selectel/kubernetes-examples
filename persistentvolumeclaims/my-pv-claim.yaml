@@ -1,9 +1,11 @@
+---
 # my-pv-claim.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: my-pv-claim
 spec:
+  storageClassName: fast.ru-1a
   accessModes:
     - ReadWriteOnce
   resources:
