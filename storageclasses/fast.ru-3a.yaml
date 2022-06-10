@@ -8,4 +8,5 @@ provisioner: cinder.csi.openstack.org
 parameters:
   type: fast.ru-3a
   availability: ru-3a
+  fsType: ext4
 allowVolumeExpansion: true
