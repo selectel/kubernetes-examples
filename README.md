@@ -4,27 +4,25 @@ This repository contains examples that can be used with Selectel Managed Kuberne
 
 Contents:
 
-```bash
+```tree
 .
 ├── LICENSE
 ├── README.md
 ├── deployments
-│   ├── README.md
-│   ├── nginx-1.17-replicas.yaml
-│   └── nginx-1.17-volume.yaml
+│   ├── README.md
+│   ├── nginx-1.17-replicas.yaml
+│   └── nginx-1.17-volume.yaml
 ├── persistentvolumeclaims
-│   ├── README.md
-│   └── my-pv-claim.yaml
+│   ├── README.md
+│   └── my-pv-claim.yaml
 ├── services
-│   ├── README.md
-│   ├── nginx-loadbalancer.yaml
-│   └── nginx-nodeport.yaml
+│   ├── README.md
+│   ├── nginx-loadbalancer.yaml
+│   └── nginx-nodeport.yaml
 └── storageclasses
     ├── README.md
-    ├── fast.ru-1a.yaml
-    ├── fast.ru-1b.yaml
-    ├── fast.ru-2a.yaml
-    ├── fast.ru-2b.yaml
+    ├── basic.ru-1a.yaml
+    ├── basic.ru-1b.yaml
     ├── fast.ru-3a.yaml
-    └── fast.ru-7a.yaml
+    └── universal.ru-9a.yaml
 ```
