@@ -1,0 +1,12 @@
+---
+# basic.ru-1a.yaml
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: basic.ru-1a
+provisioner: cinder.csi.openstack.org
+parameters:
+  type: basic.ru-1a
+  availability: ru-1a
+  fsType: ext4
+allowVolumeExpansion: true
