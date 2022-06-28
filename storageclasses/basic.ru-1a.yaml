@@ -1,11 +1,12 @@
 ---
-# fast.ru-2a.yaml
+# basic.ru-1a.yaml
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
-  name: fast.ru-2a
+  name: basic.ru-1a
 provisioner: cinder.csi.openstack.org
 parameters:
-  type: fast.ru-2a
-  availability: ru-2a
+  type: basic.ru-1a
+  availability: ru-1a
+  fsType: ext4
 allowVolumeExpansion: true
