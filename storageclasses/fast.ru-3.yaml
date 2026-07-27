@@ -3,10 +3,10 @@
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
-  name: fast.ru-3a
+  name: fast.ru-3
 provisioner: cinder.csi.openstack.org
-parameters:
-  type: fast.ru-3a
-  availability: ru-3a
-  fsType: ext4
 allowVolumeExpansion: true
+volumeBindingMode: WaitForFirstConsumer
+parameters:
+  type: fast.ru-3
+  fsType: ext4
