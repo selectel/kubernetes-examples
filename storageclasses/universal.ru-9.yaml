@@ -1,5 +1,4 @@
 ---
-# universal.ru-9a.yaml
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
